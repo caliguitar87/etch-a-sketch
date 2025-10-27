@@ -6,7 +6,10 @@ square.classList.add("square");
 square.setAttribute("style", `border:solid, 0.25px;  padding:0; width:${num-.5}px; height:${num-.5}px;`);
 
 square.addEventListener("mousemove",()=>{
-    square.style.backgroundColor ="lightblue";
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    square.style.backgroundColor =`rgb(${r},${g},${b})`;
 })
 
 container.appendChild(square);}
